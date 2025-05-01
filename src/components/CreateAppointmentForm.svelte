@@ -16,7 +16,7 @@
 
 		try {
 			const response = await fetch(
-				`http://localhost:8080/patients/${selectedPatient.ID}/appointments`,
+				`http://localhost:8080/patients/${selectedPatient?.id}/appointments`,
 				{
 					method: 'POST',
 					headers: {

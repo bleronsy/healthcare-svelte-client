@@ -44,17 +44,17 @@
 			<button
 				class="mt-6 w-full rounded-md bg-indigo-500 py-3 text-white transition-all duration-300 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
 				on:click={() => {
-					if (selectedPatient?.ID === patient.ID) {
+					if (selectedPatient?.id === patient?.id) {
 						onSelectPatient(null);
 					} else {
 						onSelectPatient(patient); 
 					}
 				}}
 			>
-				{selectedPatient?.ID === patient.ID ? 'Close Appointment Form' : 'Create Appointment'}
+				{selectedPatient?.id === patient?.id ? 'Close Appointment Form' : 'Create Appointment'}
 			</button>
 
-			{#if selectedPatient?.ID === patient.ID}
+			{#if selectedPatient?.id === patient?.id}
 				<div class="mt-4 rounded-lg border border-gray-300 bg-gray-50 p-4 shadow-sm">
 					<CreateAppointmentForm {selectedPatient} />
 				</div>

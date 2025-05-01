@@ -1,5 +1,5 @@
 export interface Appointment {
-	ID: number;
+	id: number;
 	date: string;
 	reason: string;
 	time: string;
@@ -7,7 +7,7 @@ export interface Appointment {
 }
 
 export interface Patient {
-	ID: number;
+	id: number;
 	name: string;
 	email: string;
 	appointments: Appointment[];

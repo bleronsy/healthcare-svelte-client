@@ -2,21 +2,7 @@
 	import { onMount } from 'svelte';
 	import PatientList from '../../components/PatientList.svelte'; // Assuming the correct path
 	import SearchPatient from '../../components/SearchPatient.svelte';
-
-	interface Appointment {
-		ID: number;
-		date: string;
-		time: string;
-		notes: string;
-		reason: string;
-	}
-
-	interface Patient {
-		ID: number;
-		name: string;
-		email: string;
-		appointments: Appointment[];
-	}
+	import type { Patient } from '../../types';
 
 	let patients: Patient[] = [];
 	let error: string = '';
